@@ -1,0 +1,101 @@
+.profile {
+  display: flex;
+  padding: 34px 0px 20px;
+  border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
+}
+
+.profile__avatar {
+  margin-right: 20px;
+  display: block;
+  border-radius: 16px;
+  height: 190px;
+  width: 190px;
+}
+
+.profile__column {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__name {
+  margin: 0 0 12px;
+  font-weight: 500;
+}
+
+.profile__edit-button {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  line-height: 16px;
+  cursor: pointer;
+  width: 100px;
+}
+
+.profile__description {
+  margin: 0;
+  font-weight: 500;
+}
+
+.profile__add-button {
+  margin-top: 138px;
+  margin-left: auto;
+  width: 149px;
+  height: 52px;
+  background-color: #212121;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 627px) {
+  .profile {
+    flex-direction: column;
+    max-width: 282px;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .profile__name {
+    margin-bottom: 6px;
+    font-size: 20px;
+    line-height: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  .profile__avatar {
+    margin: 0 0 12px;
+    height: 80px;
+    width: 80px;
+  }
+  .profile__add-button {
+    margin: 0;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .profile__description {
+    margin-bottom: 32px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-width: 420px;
+  }
+  .profile__column {
+    margin: 0;
+    align-items: center;
+    text-align: center;
+  }
+}

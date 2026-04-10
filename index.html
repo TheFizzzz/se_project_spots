@@ -6,7 +6,7 @@
     <meta name="description" content="Spots" />
     <meta name="author" content="Hunter Dominique" />
     <meta name="keywords" content="HTML, CSS, Image sharing, Social Media" />
-    <link rel="stylesheet" href="pages/index.css"/>
+    <link rel="stylesheet" href="pages/index.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,12 +18,115 @@
   </head>
   <body>
     <div class="page">
-      <header class="header">SPOTS</header>
+      <header class="header">
+        <img
+          src="../se_project_spots_Hunter-Dominique/images/spots-images/Logo.png"
+          alt="Logo"
+          class="header__logo"
+        />
+      </header>
       <main class="content">
-        <section class="profile">Profile</section>
-        <section class="cards">Cards</section>
+        <section class="profile page__section">
+          <img
+            src="../se_project_spots_Hunter-Dominique/images/spots-images/spots-images/avatar.jpg"
+            alt="current profile avatar"
+            class="profile__avatar"
+          />
+          <div class="profile__column">
+            <h1 class="profile__name">Bessie Coleman</h1>
+            <p class="profile__description">Civil Aviator</p>
+            <button type="button" class="profile__edit-button">
+              <img
+                src="../se_project_spots_Hunter-Dominique/images/spots-images/Pencil.svg"
+                alt="Pencil Icon"
+                class="pencil__button"
+              />
+              Edit Profile
+            </button>
+          </div>
+          <button type="button" class="profile__add-button">
+            <img
+              src="../se_project_spots_Hunter-Dominique/images/spots-images/Plus.svg"
+              alt="Plus Icon"
+              class="plus__button"
+            />
+            New Post
+          </button>
+        </section>
+        <section class="cards page__section">
+          <ul class="cards__list">
+            <li class="card">
+              <img
+                src="../se_project_spots_Hunter-Dominique/images/spots-images/spots-images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+                alt="Val Thorens"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h2 class="card__title">Val Thorens</h2>
+                <button type="button" class="card__like-button"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="../se_project_spots_Hunter-Dominique/images/spots-images/spots-images/2-photo-by-ceiline-from-pexels.jpg"
+                alt="Restaraunt terrace"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h2 class="card__title">Restaraunt terrace</h2>
+                <button type="button" class="card__like-button"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="../se_project_spots_Hunter-Dominique/images/spots-images/spots-images/3-photo-by-tubanur-dogan-from-pexels.jpg"
+                alt="An outdoor cafe"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h2 class="card__title">An outdoor cafe</h2>
+                <button type="button" class="card__like-button"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="../se_project_spots_Hunter-Dominique/images/spots-images/spots-images/4-photo-by-maurice-laschet-from-pexels.jpg"
+                alt="A very long bridge"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h2 class="card__title">A very long bridge, over the forest...</h2>
+                <button type="button" class="card__like-button"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="../se_project_spots_Hunter-Dominique/images/spots-images/spots-images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
+                alt="Tunnel with morning light"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h2 class="card__title">Tunnel with morning light</h2>
+                <button type="button" class="card__like-button"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="../se_project_spots_Hunter-Dominique/images/spots-images/spots-images/6-photo-by-moritz-feldmann-from-pexels.jpg"
+                alt="Mountain house"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h2 class="card__title">Mountain house</h2>
+                <button type="button" class="card__like-button"></button>
+              </div>
+            </li>
+          </ul>
+        </section>
       </main>
-      <footer class="footer">Footer</footer>
+      <footer class="footer">
+        <p class="footer__text">2023 © Spots</p>
+      </footer>
     </div>
   </body>
 </html>
