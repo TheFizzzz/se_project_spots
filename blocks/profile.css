@@ -7,7 +7,7 @@
 .profile__avatar {
   margin-right: 20px;
   display: block;
-  border-radius: 16px;
+  border-radius: 8px;
   height: 190px;
   width: 190px;
 }
@@ -21,10 +21,16 @@
 .profile__name {
   margin: 0 0 12px;
   font-weight: 500;
+  font-size: 32px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .profile__edit-button {
-  margin-top: auto;
+  margin-top: 108px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -40,17 +46,21 @@
 .profile__description {
   margin: 0;
   font-weight: 500;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .profile__add-button {
-  margin-top: 138px;
-  margin-left: auto;
+  margin: 138px 0 0;
   width: 149px;
   height: 52px;
   background-color: #212121;
-  color: #fff;
+  color: #fcf5e5;
   border: none;
-  border-radius: 16px;
+  border-radius: 8px;
   cursor: pointer;
 }
 

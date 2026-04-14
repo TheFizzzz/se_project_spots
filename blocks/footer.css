@@ -1,5 +1,6 @@
 .footer {
-  padding: 60px auto;
+  padding: 60px 0;
+  margin: 0;
 }
 
 .footer__text {
