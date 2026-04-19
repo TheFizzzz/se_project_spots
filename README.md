@@ -28,5 +28,3 @@ project and some challenges I faced while building it.
 ##### Github Pages link
 
 (https://github.com/TheFizzzz/se_project_spots/deployments/github-pages)
-
-###### I really need help fixing my add post button, I can't figure out why it's stuck on the left side :(
