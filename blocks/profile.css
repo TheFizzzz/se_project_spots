@@ -55,6 +55,7 @@
 
 .profile__add-button {
   margin: 138px 0 0;
+  margin-left: auto;
   width: 149px;
   height: 52px;
   background-color: #212121;
