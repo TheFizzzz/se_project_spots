@@ -5,7 +5,7 @@
 
 .cards__list {
   list-style-type: none;
-  padding: 0;
+  padding: 0 0 40px;
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, 413px);

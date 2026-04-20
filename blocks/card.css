@@ -8,7 +8,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 12px;
 }
+
 
 .card__caption {
   white-space: nowrap;
@@ -47,7 +49,7 @@
 
 .card__title {
   font-weight: 500;
-  margin-bottom: 0px;
+  margin-top: 0;
   font-size: 20px;
   text-overflow: ellipsis;
   white-space: no-wrap;
