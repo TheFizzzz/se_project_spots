@@ -52,7 +52,6 @@
   margin-bottom: 0;
   font-size: 20px;
   text-overflow: ellipsis;
-  white-space: no-wrap;
   overflow: hidden;
 }
 
