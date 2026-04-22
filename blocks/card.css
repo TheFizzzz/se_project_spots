@@ -11,7 +11,6 @@
   margin-top: 12px;
 }
 
-
 .card__caption {
   white-space: nowrap;
   overflow: hidden;
@@ -49,7 +48,7 @@
 
 .card__title {
   font-weight: 500;
-  margin-top:0;
+  margin-top: 0;
   margin-bottom: 0;
   font-size: 20px;
   text-overflow: ellipsis;

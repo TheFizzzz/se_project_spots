@@ -36,7 +36,7 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
-  opacity: .4;
+  opacity: 0.4;
 }
 
 .modal__close-button:hover {
@@ -94,10 +94,10 @@
     font-size: 20px;
     margin: 0 0 24px;
   }
-  .modal__submit-button{
+  .modal__submit-button {
     max-width: none;
   }
-  .modal__input{
+  .modal__input {
     max-width: 276px;
     padding-left: 12px;
   }
