@@ -51,7 +51,9 @@ const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseButton = newPostModal.querySelector(".modal__close-button");
 const newPostFormEl = newPostModal.querySelector(".modal__form");
 const newPostImageInput = newPostModal.querySelector("#card-image-input");
-const newPostCaptionInput = newPostModal.querySelector("#profile-caption-input");
+const newPostCaptionInput = newPostModal.querySelector(
+  "#profile-caption-input",
+);
 const cardsListEl = document.querySelector(".cards__list");
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
