@@ -30,7 +30,7 @@
 }
 
 .profile__edit-button {
-  margin-top: 108px;
+  margin-top: auto;
   display: inline-flex;
   align-items: center;
   gap: 8px;
