@@ -73,7 +73,6 @@ const previewCaptionElement = previewModal.querySelector(".modal__title");
 const cardTemplate = document
   .querySelector("#card-template")
   .content.querySelector(".card");
-const cardList = document.querySelector(".cards__list");
 
 function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -169,5 +168,5 @@ newPostFormEl.addEventListener("submit", function (evt) {
 
 initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
-  cardList.append(cardElement);
+  cardsListEl.append(cardElement);
 });

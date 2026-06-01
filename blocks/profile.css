@@ -13,9 +13,9 @@
 }
 
 .profile__column {
-  white-space: nowrap;
   display: flex;
   flex-direction: column;
+  max-width: 420px;
 }
 
 .profile__name {
@@ -90,7 +90,6 @@
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    line-clamp: 3;
     -webkit-box-orient: vertical;
   }
   .profile__avatar {
@@ -111,10 +110,10 @@
     -webkit-line-clamp: 3;
     line-clamp: 3;
     -webkit-box-orient: vertical;
-    max-width: 420px;
   }
   .profile__column {
     margin: 0;
+    max-width: 100%;
     align-items: center;
     text-align: center;
   }

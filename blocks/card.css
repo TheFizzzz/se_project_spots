@@ -50,9 +50,10 @@
   height: 20px;
   border: none;
   background-color: transparent;
-  opacity: 40%;
+  opacity: 0.4;
   cursor: pointer;
   transition: opacity 0.2s ease;
+  background-repeat: no-repeat;
 }
 
 .card__like-button_active {
@@ -79,8 +80,10 @@
   margin-top: 0;
   margin-bottom: 0;
   font-size: 20px;
-  text-overflow: ellipsis;
+  min-width: 0;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media screen and (max-width: 627px) {
@@ -89,11 +92,11 @@
   }
   .card__title {
     margin: 12px 0;
-    text-overflow: ellipsis;
+    white-space: normal;
     overflow: hidden;
+    text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    line-clamp: 3;
     -webkit-box-orient: vertical;
   }
   .card__like-button {

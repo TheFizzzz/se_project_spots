@@ -135,6 +135,11 @@
   height: 52px;
   border-radius: 8px;
   border: none;
+  transition: opacity 0.2s ease;
+}
+
+.modal__submit-button:hover {
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 627px) {
@@ -151,9 +156,6 @@
   }
   .modal__input {
     padding-left: 12px;
-  }
-  .modal__input::placeholder {
-    margin-left: 12px;
   }
   .modal__container {
     padding: 0 16px;
