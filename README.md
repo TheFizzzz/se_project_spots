@@ -25,6 +25,7 @@ Good luck and have fun!
 Check out [this video](https://drive.google.com/file/d/1LXwiqlTTd22Q5Xv4UKZB8FMVZTuXQUZV/view?usp=sharing), where I describe my 
 project and some challenges I faced while building it.
 
-##### Github Pages link
+##### GitHub Pages
 
-(https://github.com/TheFizzzz/se_project_spots/deployments/github-pages)
+- **Live site:** [Deployed project](https://thefizzzz.github.io/se_project_spots/)
+- **Deployments:** [GitHub Pages deployment history](https://github.com/TheFizzzz/se_project_spots/deployments/github-pages)

@@ -2,6 +2,7 @@
   width: 100%;
   max-width: 413px;
   display: block;
+  position: relative;
 }
 
 .card__content {
@@ -23,6 +24,24 @@
   object-fit: cover;
   display: block;
   border-radius: 8px;
+  cursor: pointer;
+}
+
+.card__delete-button {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-image: url(../images/spots-images/spots-icons/Delete_Icon.png);
+}
+
+.card__delete-button:hover {
+  background-image: url(../images/spots-images/spots-icons/Delete_Icon_Hover.png);
+  transition: background-image 0.2s ease;
 }
 
 .card__like-button {
@@ -36,8 +55,17 @@
   transition: opacity 0.2s ease;
 }
 
+.card__like-button_active {
+  background-image: url(../images/spots-images/spots-icons/Like_Icon_On.png);
+  opacity: 1;
+}
+
 .card__like-button:hover {
   opacity: 1;
+}
+
+.card__like-button_active:hover {
+  opacity: 0.4;
 }
 
 .card__like-button:focus-visible {

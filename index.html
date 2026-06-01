@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Spots">
-    <meta name="author" content="Hunter Dominique">
-    <meta name="keywords" content="HTML, CSS, Image sharing, Social Media">
-    <link rel="stylesheet" href="pages/index.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Spots" />
+    <meta name="author" content="Hunter Dominique" />
+    <meta name="keywords" content="HTML, CSS, Image sharing, Social Media" />
+    <link rel="stylesheet" href="pages/index.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
-    >
+    />
     <title>Spots</title>
   </head>
   <body>
@@ -23,7 +23,7 @@
           src="./images/spots-images/spots-icons/Logo.png"
           alt="Logo"
           class="header__logo"
-        >
+        />
       </header>
       <main class="content">
         <section class="profile page__section">
@@ -31,7 +31,7 @@
             src="./images/spots-images/spots-images/avatar.jpg"
             alt="current profile avatar"
             class="profile__avatar"
-          >
+          />
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
@@ -39,7 +39,7 @@
               <img
                 src="./images/spots-images/spots-icons/Pencil.svg"
                 alt="Pencil Icon"
-              >
+              />
               Edit Profile
             </button>
           </div>
@@ -47,80 +47,26 @@
             <img
               src="./images/spots-images/spots-icons/Plus.svg"
               alt="Plus Icon"
-            >
+            />
             New Post
           </button>
         </section>
         <section class="cards page__section">
           <ul class="cards__list">
-            <li class="card">
-              <img
-                src="./images/spots-images/spots-images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Val Thorens"
-                class="card__image"
-              >
-              <div class="card__content">
-                <h2 class="card__title">Val Thorens</h2>
-                <button type="button" class="card__like-button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/spots-images/spots-images/2-photo-by-ceiline-from-pexels.jpg"
-                alt="Restaraunt terrace"
-                class="card__image"
-              >
-              <div class="card__content">
-                <h2 class="card__title">Restaraunt terrace</h2>
-                <button type="button" class="card__like-button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/spots-images/spots-images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-                alt="An outdoor cafe"
-                class="card__image"
-              >
-              <div class="card__content">
-                <h2 class="card__title">An outdoor cafe</h2>
-                <button type="button" class="card__like-button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/spots-images/spots-images/4-photo-by-maurice-laschet-from-pexels.jpg"
-                alt="A very long bridge"
-                class="card__image"
-              >
-              <div class="card__content">
-                <h2 class="card__title">
-                  A very long bridge, over the forest...
-                </h2>
-                <button type="button" class="card__like-button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/spots-images/spots-images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-                alt="Tunnel with morning light"
-                class="card__image"
-              >
-              <div class="card__content">
-                <h2 class="card__title">Tunnel with morning light</h2>
-                <button type="button" class="card__like-button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/spots-images/spots-images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Mountain house"
-                class="card__image"
-              >
-              <div class="card__content">
-                <h2 class="card__title">Mountain house</h2>
-                <button type="button" class="card__like-button"></button>
-              </div>
-            </li>
+            <template id="card-template">
+              <li class="card">
+                <button type="button" class="card__delete-button"></button>
+                <img src="#" alt="" class="card__image" />
+                <div class="card__content">
+                  <h2 class="card__title"></h2>
+                  <button
+                    type="button"
+                    class="card__like-button"
+                    aria-label="Like card"
+                  ></button>
+                </div>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
@@ -133,7 +79,7 @@
             <img
               src="./images/spots-images/spots-icons/Close_Icon_Dark.png"
               alt="Close Icon"
-            >
+            />
           </button>
           <h2 class="modal__title">New Post</h2>
           <form class="modal__form">
@@ -144,7 +90,7 @@
                 type="url"
                 class="modal__input"
                 placeholder="Paste a link to the picture"
-              >
+              />
             </label>
             <label for="profile-caption-input" class="modal__label">
               Caption
@@ -153,7 +99,7 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your caption"
-              >
+              />
             </label>
             <button type="submit" class="modal__submit-button">Save</button>
           </form>
@@ -165,7 +111,7 @@
             <img
               src="./images/spots-images/spots-icons/Close_Icon_Dark.png"
               alt="Close Icon"
-            >
+            />
           </button>
           <h2 class="modal__title">Edit Profile</h2>
           <form class="modal__form">
@@ -176,7 +122,7 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your name"
-              >
+              />
             </label>
             <label for="profile-description-input" class="modal__label">
               Description
@@ -185,10 +131,26 @@
                 type="text"
                 class="modal__input"
                 placeholder="Describe yourself"
-              >
+              />
             </label>
             <button type="submit" class="modal__submit-button">Save</button>
           </form>
+        </div>
+      </div>
+      <div class="modal modal_type_preview" id="preview-modal">
+        <div class="modal__image-container">
+          <button
+            type="button"
+            class="modal__close-button modal__close_type_preview"
+            aria-label="Close Modal"
+          >
+            <img
+              src="./images/spots-images/spots-icons/Close_Icon_Light.png"
+              alt="Close Icon"
+            />
+          </button>
+          <img src="#" alt="" class="modal__image" />
+          <h2 class="modal__title"></h2>
         </div>
       </div>
     </div>
