@@ -147,7 +147,7 @@
     font-size: 20px;
     margin: 0 0 24px;
   }
-  .modal__close-button.modal__close_type_preview {
+  .modal__close-button.modal__close-button_type_preview {
     top: -48px;
     right: 0;
   }
