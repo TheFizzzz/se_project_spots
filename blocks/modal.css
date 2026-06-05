@@ -176,4 +176,9 @@
     max-width: none;
     margin: 0 0 12px;
   }
+
+  .modal__image-container,
+  .modal__image {
+    max-width: 90vw;
+  }
 }

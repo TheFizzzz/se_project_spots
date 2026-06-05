@@ -54,6 +54,7 @@
   cursor: pointer;
   transition: opacity 0.2s ease;
   background-repeat: no-repeat;
+  flex-shrink: 0;
 }
 
 .card__like-button_active {
@@ -89,10 +90,10 @@
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;
+    max-width: 90vw;
   }
   .card__title {
     margin: 12px 0;
-    white-space: normal;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
