@@ -36,16 +36,16 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  background-image: url(../images/spots-images/spots-icons/Delete_Icon.png);
+  background-image: url(../images/spots-images/spots-icons/Delete_Icon.svg);
 }
 
 .card__delete-button:hover {
-  background-image: url(../images/spots-images/spots-icons/Delete_Icon_Hover.png);
+  background-image: url(../images/spots-images/spots-icons/Delete_Icon_Hover.svg);
   transition: background-image 0.2s ease;
 }
 
 .card__like-button {
-  background-image: url(../images/spots-images/spots-icons/Like_Icon_Dark.png);
+  background-image: url(../images/spots-images/spots-icons/Like_Icon_Dark.svg);
   width: 23px;
   height: 20px;
   border: none;
@@ -57,7 +57,7 @@
 }
 
 .card__like-button_active {
-  background-image: url(../images/spots-images/spots-icons/Like_Icon_On.png);
+  background-image: url(../images/spots-images/spots-icons/Like_Icon_On.svg);
   opacity: 1;
 }
 
