@@ -22,8 +22,11 @@ Good luck and have fun!
 
 #### Project Pitch Video
  
-Check out [this video](https://drive.google.com/file/d/1LXwiqlTTd22Q5Xv4UKZB8FMVZTuXQUZV/view?usp=sharing), where I describe my 
-project and some challenges I faced while building it.
+ Check out these videos, where I describe my project
+and some challenges I faced while building it:
+
+- [HunterDominique-ProjectPitch-SpotsStage2](https://drive.google.com/file/d/1LXwiqlTTd22Q5Xv4UKZB8FMVZTuXQUZV/view?usp=sharing)
+- [HunterDominique-ProjectPitch-SpotsStage9](https://drive.google.com/file/d/188YjvOXm0TCbLY22omrOcvXpRFtldxl_/view?usp=sharing)
 
 ##### GitHub Pages
 

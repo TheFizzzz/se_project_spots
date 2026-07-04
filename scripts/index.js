@@ -1,5 +1,3 @@
-console.log("Hello, world!");
-
 const initialCards = [
   {
     name: "Golden Gate Bridge",
@@ -36,7 +34,6 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
 ];
-//Initial Array of cards ^
 
 const editProfileButton = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
@@ -74,6 +71,10 @@ const cardTemplate = document
   .querySelector("#card-template")
   .content.querySelector(".card");
 
+const modalList = document.querySelectorAll(".modal");
+
+let openedModal = null;
+
 function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardTitleElement = cardElement.querySelector(".card__title");
@@ -105,29 +106,45 @@ function getCardElement(data) {
   return cardElement;
 }
 
+function handleEscClose(evt) {
+  if (evt.key === "Escape" && openedModal) {
+    closeModal(openedModal);
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  openedModal = modal;
+  document.addEventListener("keydown", handleEscClose);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscClose);
+  openedModal = null;
 }
 
-editProfileButton.addEventListener("click", function () {
-  openModal(editProfileModal);
-  editProfileNameInput.value = profileNameEl.textContent;
-  editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+modalList.forEach((modal) => {
+  modal.addEventListener("click", function (evt) {
+    if (evt.target.classList.contains("modal")) {
+      closeModal(modal);
+    }
+  });
 });
 
-//Added on to edit profile button modal on line 56-60 to be able to actaully
-// edit the profile name/ desc.
-// Modals are for the button functionality
+editProfileButton.addEventListener("click", function () {
+  editProfileNameInput.value = profileNameEl.textContent;
+  editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+  resetValidation(editProfileFormEl, settings);
+  openModal(editProfileModal);
+});
 
 editProfileCloseButton.addEventListener("click", function () {
   closeModal(editProfileModal);
 });
 
 newPostButton.addEventListener("click", function () {
+  resetValidation(newPostFormEl, settings);
   openModal(newPostModal);
 });
 
@@ -142,6 +159,10 @@ previewModalCloseButton.addEventListener("click", function () {
 editProfileFormEl.addEventListener("submit", function (evt) {
   evt.preventDefault();
 
+  if (!editProfileFormEl.checkValidity()) {
+    return;
+  }
+
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
 
@@ -150,6 +171,10 @@ editProfileFormEl.addEventListener("submit", function (evt) {
 
 newPostFormEl.addEventListener("submit", function (evt) {
   evt.preventDefault();
+
+  if (!newPostFormEl.checkValidity()) {
+    return;
+  }
 
   const cardData = {
     name: newPostCaptionInput.value,
@@ -160,11 +185,9 @@ newPostFormEl.addEventListener("submit", function (evt) {
   cardsListEl.prepend(cardEl);
 
   newPostFormEl.reset();
+  resetValidation(newPostFormEl, settings);
   closeModal(newPostModal);
 });
-
-//this array is for calling initial cards to setup a for each loopthrough the initial cards array.
-//
 
 initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);

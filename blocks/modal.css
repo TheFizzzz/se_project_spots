@@ -127,7 +127,27 @@
   font-size: 20px;
 }
 
-.modal__submit-button {
+.modal__input_type_error {
+  border: 1px solid #ff0000;
+}
+
+.modal__error {
+  display: block;
+  margin-top: 8px;
+  min-height: 30px;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  color: #ff0000;
+  visibility: hidden;
+}
+
+.modal__error_visible {
+  visibility: visible;
+}
+
+.modal__button {
   background-color: #212121;
   color: #fcf5e5;
   cursor: pointer;
@@ -138,8 +158,22 @@
   transition: opacity 0.2s ease;
 }
 
-.modal__submit-button:hover {
+.modal__button:hover {
   opacity: 0.8;
+}
+
+.modal__button_disabled,
+.modal__button:disabled {
+  background-color: #212121;
+  color: #fcf5e5;
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
+.modal__button_disabled:hover,
+.modal__button:disabled:hover {
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 627px) {
@@ -172,7 +206,7 @@
     right: 0;
   }
 
-  .modal__submit-button {
+  .modal__button {
     max-width: none;
     margin: 0 0 12px;
   }
