@@ -144,7 +144,6 @@ editProfileCloseButton.addEventListener("click", function () {
 });
 
 newPostButton.addEventListener("click", function () {
-  resetValidation(newPostFormEl, settings);
   openModal(newPostModal);
 });
 
