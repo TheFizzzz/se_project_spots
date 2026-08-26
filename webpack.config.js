@@ -3,17 +3,17 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-module.exports = {
+module.exports = (env, argv) => ({
   entry: {
     main: "./src/pages/index.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js",
-    publicPath: "",
+    publicPath: argv.mode === "production" ? "/se_project_spots/" : "",
   },
 
-  mode: "development",
+  mode: argv.mode || "development",
   devtool: "inline-source-map",
   stats: "errors-only",
   devServer: {
@@ -59,4 +59,4 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
   ],
-};
+});
