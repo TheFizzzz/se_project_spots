@@ -6,8 +6,6 @@
     <meta name="description" content="Spots" />
     <meta name="author" content="Hunter Dominique" />
     <meta name="keywords" content="HTML, CSS, Image sharing, Social Media" />
-    <link rel="stylesheet" href="pages/index.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Spots</title>
@@ -16,24 +14,37 @@
     <div class="page">
       <header class="header">
         <img
-          src="./images/spots-images/spots-icons/Logo.svg"
+          src="<%= require('./images/spots-images/spots-icons/Logo.svg') %>"
           alt="Spots logo"
           class="header__logo"
         />
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img
-            src="./images/spots-images/spots-images/avatar.jpg"
-            alt="Bessie Coleman avatar"
-            class="profile__avatar"
-          />
+          <div class="profile__avatar-container">
+            <img
+              src="https://practicum-content.s3.amazonaws.com/resources/avatar_placeholder_1704989734.svg"
+              alt="Profile avatar"
+              class="profile__avatar profile__avatar_loading"
+            />
+            <button
+              type="button"
+              class="profile__avatar-edit-button"
+              aria-label="Edit avatar"
+            >
+              <img
+                src="<%= require('./images/spots-images/spots-icons/Pencil.svg') %>"
+                alt=""
+              />
+              Edit Avatar
+            </button>
+          </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-button">
               <img
-                src="./images/spots-images/spots-icons/Pencil.svg"
+                src="<%= require('./images/spots-images/spots-icons/Pencil.svg') %>"
                 alt="Pencil Icon"
               />
               Edit Profile
@@ -41,7 +52,7 @@
           </div>
           <button type="button" class="profile__add-button">
             <img
-              src="./images/spots-images/spots-icons/Plus.svg"
+              src="<%= require('./images/spots-images/spots-icons/Plus.svg') %>"
               alt="Plus Icon"
             />
             New Post
@@ -73,7 +84,7 @@
         <div class="modal__container">
           <button type="button" class="modal__close-button">
             <img
-              src="./images/spots-images/spots-icons/Close_Icon_Dark.svg"
+              src="<%= require('./images/spots-images/spots-icons/Close_Icon_Dark.svg') %>"
               alt="Close Icon"
             />
           </button>
@@ -111,7 +122,7 @@
         <div class="modal__container">
           <button type="button" class="modal__close-button">
             <img
-              src="./images/spots-images/spots-icons/Close_Icon_Dark.svg"
+              src="<%= require('./images/spots-images/spots-icons/Close_Icon_Dark.svg') %>"
               alt="Close Icon"
             />
           </button>
@@ -150,6 +161,58 @@
           </form>
         </div>
       </div>
+      <div class="modal" id="edit-avatar-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-button">
+            <img
+              src="<%= require('./images/spots-images/spots-icons/Close_Icon_Dark.svg') %>"
+              alt="Close Icon"
+            />
+          </button>
+          <h2 class="modal__title">Edit Avatar</h2>
+          <form class="modal__form" novalidate>
+            <label for="avatar-link-input" class="modal__label">
+              Profile Picture
+              <input
+                id="avatar-link-input"
+                type="url"
+                required
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+              />
+              <span class="modal__error" id="avatar-link-input-error"></span>
+            </label>
+            <button type="submit" class="modal__button">Save</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal" id="delete-card-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-button">
+            <img
+              src="<%= require('./images/spots-images/spots-icons/Close_Icon_Dark.svg') %>"
+              alt="Close Icon"
+            />
+          </button>
+          <h2 class="modal__title modal__title_type_center">
+            Are you sure?
+          </h2>
+          <form class="modal__form modal__form_type_delete" novalidate>
+            <button
+              type="submit"
+              class="modal__button modal__button_type_delete"
+            >
+              Delete
+            </button>
+            <button
+              type="button"
+              class="modal__button modal__button_type_cancel"
+            >
+              Cancel
+            </button>
+          </form>
+        </div>
+      </div>
       <div class="modal modal_type_preview" id="preview-modal">
         <div class="modal__image-container">
           <button
@@ -158,7 +221,7 @@
             aria-label="Close Modal"
           >
             <img
-              src="./images/spots-images/spots-icons/Close_Icon_Light.svg"
+              src="<%= require('./images/spots-images/spots-icons/Close_Icon_Light.svg') %>"
               alt="Close Icon"
             />
           </button>
@@ -167,7 +230,5 @@
         </div>
       </div>
     </div>
-    <script src="./scripts/validation.js"></script>
-    <script src="./scripts/index.js"></script>
   </body>
 </html>

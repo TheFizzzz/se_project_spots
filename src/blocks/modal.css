@@ -176,6 +176,47 @@
   opacity: 0.5;
 }
 
+.modal__button_disabled:hover,
+.modal__button:disabled:hover {
+  opacity: 0.5;
+}
+
+.modal__title_type_center {
+  text-align: center;
+}
+
+.modal__form_type_delete {
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal__button_type_delete {
+  background-color: #ff6565;
+  color: #212121;
+  max-width: none;
+  min-width: 156px;
+}
+
+.modal__button_type_delete:hover {
+  background-color: #ff3333;
+  opacity: 1;
+}
+
+.modal__button_type_cancel {
+  background-color: #ffffff;
+  color: #212121;
+  border: 1px solid #212121;
+  max-width: none;
+  min-width: 156px;
+}
+
+.modal__button_type_cancel:hover {
+  background-color: #212121;
+  color: #ffffff;
+  opacity: 1;
+}
+
 @media screen and (max-width: 627px) {
   .modal__container {
     padding: 12px 0 0;
@@ -209,6 +250,17 @@
   .modal__button {
     max-width: none;
     margin: 0 0 12px;
+  }
+
+  .modal__form_type_delete {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .modal__button_type_delete,
+  .modal__button_type_cancel {
+    width: 100%;
+    min-width: 0;
   }
 
   .modal__image-container,
